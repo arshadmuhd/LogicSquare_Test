@@ -3,7 +3,7 @@ findCaliforniaCafes(search_string)
 
 function findCaliforniaCafes(search_string) {
     
-    // You can store the given arrays in 2 internal variables
+   
     const cafes = [
         {
         name: "Bazaar Cafe",
@@ -78,10 +78,11 @@ function findCaliforniaCafes(search_string) {
         lat: "35.77813",
         long: "119.41791"
         }];
-    // Your code goes here
+    // code goes here
 
     for(var i=0;i<cafes.length;i++){
-        if(cafes[i].name.includes(search_string)){
+        
+        if(cafes[i].name.toLowerCase().includes(search_string.toLowerCase())){
            let searchString_id=cafes[i].place_id;
             
            for(var j=0;j<places.length;j++){
@@ -96,3 +97,4 @@ function findCaliforniaCafes(search_string) {
 }
     
    
+
